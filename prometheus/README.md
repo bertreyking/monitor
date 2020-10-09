@@ -38,7 +38,7 @@
     action: labelmap
  ```
  - prometheus-job_configs_jpg
- ![kubelet-job](https://github.com/bertreyking/repos/blob/master/prometheus/exporter/blackbox_exporter/labels.jpg?raw=true)
+ ![kubelet-job](https://raw.githubusercontent.com/bertreyking/monitor/master/prometheus/exporter/blackbox_exporter/labels.jpg)
  
  # relabel_config场景
  ```
