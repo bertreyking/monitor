@@ -34,7 +34,8 @@ level=error ts=2021-01-06T10:09:02.392Z caller=manager.go:188 component="scrape 
 4. 编辑servicemonitor下kubelet监控项
 ```
 kubectl edit servicemonitor kubelet -n monitoring
-%s#/etc/ssl/private/kubelet#/etc/prometheus/secrets/kubelet-tls#g # :(冒号全局替换保存退出)，再次查看kubelet监控项已恢复
+%s#/etc/ssl/private/kubelet#/etc/prometheus/secrets/kubelet-tls#g # :(冒号)，全局替换保存退出，再次查看kubelet监控项已恢复
 ```
 # 结论
-- 因为之前是patch的方式添加的volumesvolumemount字段，所以在编辑 crd prometheus下的k8s资源后，重重建prometheus的pod
+- 因为之前是patch方式添加的volumes和volumemounts字段，所以在编辑 crds prometheus下的k8s资源后，重建了prometheus的pod，所以之前添加的配置丢失了
+- 查看operator相关知识，说是可以在crd prometheus下的k8s资源中自定义volumes和volumemounts，但是尝试了几次不行，于是参照了etcd-certs的方式，并修改 servermointor 下kubelet后使其更改永久生效
