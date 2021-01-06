@@ -1,3 +1,5 @@
-#Monitoring & Syslog
-- Prometheus
-- loki
+# Monitoring
+- [x] [prometheus]()
+
+ # Syslog
+- [x] [loki]()
