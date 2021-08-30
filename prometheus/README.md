@@ -12,5 +12,5 @@
 # grafana部署/使用
 - [x] [grafana](https://github.com/bertreyking/monitor/tree/master/prometheus/grafana)
 
-# exporter监控乡部署/使用
+# exporter监控项部署/使用
 - [x] [blackbox_exporter](https://github.com/bertreyking/monitor/tree/master/prometheus/exporter/blackbox_exporter)
